@@ -1,6 +1,5 @@
 <template>
-    <h1> HOasdasdME</h1>
-    <CounterButton />
+    <h1> Signup</h1>
 </template>
 
 <script setup>
