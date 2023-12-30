@@ -2,6 +2,7 @@
 <template>
     <div class="post-form">
       <textarea v-model="postContent" placeholder="Write your post..."></textarea>
+      <textarea v-model="author" placeholder="Write your name..."></textarea>
       <button @click="submitPost">Post</button>
     </div>
   </template>
@@ -12,6 +13,7 @@
   import { getFirestore, collection, addDoc } from 'firebase/firestore';
   
   const postContent = ref('');
+  const author = ref('');
   
   const submitPost = async () => {
     // Check if the user is logged in
@@ -27,6 +29,7 @@
         await addDoc(postsCollection, {
           content: postContent.value,
           userId: user.uid,
+          author: author.value,
           // Add other relevant fields as needed
         });
   
