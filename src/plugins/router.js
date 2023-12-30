@@ -20,6 +20,11 @@ const routes = [
         path: '/feed',
         name: 'Feed',
         component: () => import('../views/Feed.vue')
+    },
+    {
+        path: '/postform',
+        name: 'PostForm',
+        component: () => import('../views/PostForm.vue')
     }
 ];
 

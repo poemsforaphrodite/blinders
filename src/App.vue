@@ -40,22 +40,23 @@ const handleSignOut = () => {
 }
 </script>
 
+<!-- Add this to your existing styles in the same <style> block -->
 <style scoped>
 #app {
   font-family: 'Poppins', sans-serif;
   text-align: center;
   color: #2c3e50;
-  padding-top: 20px; /* Add padding to prevent content from being hidden under the navbar */
+  padding-top: 20px;
 }
 
 nav {
-  position: fixed; /* Fix the navbar at the top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff; /* Set a background color for the navbar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  z-index: 1000; /* Set a higher z-index to ensure the navbar is above other elements */
+  background-color: #34495e; /* Change to your preferred background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .navigation {
@@ -63,8 +64,9 @@ nav {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Spread the items evenly */
   align-items: center;
+  padding: 10px 20px; /* Add padding to the navigation items */
 }
 
 .navigation li {
@@ -77,16 +79,31 @@ nav {
 
 .navigation a {
   text-decoration: none;
-  color: #2c3e50;
+  color: #ecf0f1; /* Change to your preferred text color */
   font-weight: bold;
+  font-size: 16px;
   transition: color 0.3s ease-in-out;
 }
 
 .navigation a:hover {
-  color: #42b983;
+  color: #e74c3c; /* Change to your preferred hover color */
+}
+
+button {
+  background-color: #e74c3c; /* Change to your preferred button color */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #c0392b; /* Change to your preferred button hover color */
 }
 
 .router-link-active {
-  color: #42b983;
+  color: #3498db; /* Change to your preferred active link color */
 }
 </style>
