@@ -8,7 +8,10 @@
 
     <!-- Display all posts -->
     <div v-for="post in posts" :key="post.id" class="post">
-      <p>{{ post.content }}</p>
+      <!-- Wrap the post content in a router-link to the post's page -->
+      <router-link :to="`/posts/${post.id}`">
+        <p>{{ post.content }}</p>
+      </router-link>
       <span>Posted by: {{ post.author }}</span> <!-- Update to use 'author' field -->
       <!-- Add any other post details as needed -->
     </div>

@@ -25,6 +25,11 @@ const routes = [
         path: '/postform',
         name: 'PostForm',
         component: () => import('../views/PostForm.vue')
+    },
+    {
+        path: '/posts/:id', // New route for individual posts
+        name: 'Post',
+        component: () => import('../views/Post.vue') // Make sure to create this component
     }
 ];
 
