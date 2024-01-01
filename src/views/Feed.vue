@@ -19,6 +19,7 @@
 </template>
 
 <script setup>
+//FIXME: add comment author
 import { ref, onMounted } from 'vue';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 

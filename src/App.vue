@@ -6,8 +6,8 @@
         <li><router-link to="/login">Login</router-link></li>
         <li><router-link to="/signup">Signup</router-link></li>
         <li><router-link to="/feed">Feed</router-link></li>
-        <li><button @click="handleSignOut" v-if="isLoggedin">Sign Out</button></li>
         <li v-if="isLoggedin">Logged in as {{ username }}</li>
+        <li><button @click="handleSignOut" v-if="isLoggedin">Sign Out</button></li>
       </ul>
     </nav>
     <router-view />
